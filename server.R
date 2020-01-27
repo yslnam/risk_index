@@ -1,4 +1,4 @@
-# Some notes here
+# server.R
 
 function(input, output, session) {
 
