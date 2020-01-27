@@ -1,4 +1,4 @@
-# Some introductory notes here
+# ui.R
 
 # Layout
 dashboardPage(
