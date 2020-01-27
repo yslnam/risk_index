@@ -13,7 +13,7 @@ dashboardPage(
         tags$li(actionLink("GitHub", 
                            label = "", 
                            icon = icon("github"),
-                           onclick = "window.open('https://github.com/yslnam')"),
+                           onclick = "window.open('https://github.com/yslnam/risk_index')"),
                 class = "dropdown")
     ),
     dashboardSidebar(
