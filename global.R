@@ -19,7 +19,8 @@ conflicts_wide <- fread(file = "./data/gcri.csv", drop = 1)
 conflicts_long <- fread(file = "./data/conflicts_by_region.csv", stringsAsFactors = TRUE)
 
 # Custom Function ####################################
-# Function
+# Adapted from Kyle Walker's WDI_leaflet function
+# Link: https://github.com/walkerke/teaching-with-datavis/blob/master/wdi-leaflet/wdi_leaflet.R
 gcri_leaflet <- function(gc.indicator, gc.year, hue = "YlOrRd") {
   
   # Read shape file
