@@ -31,7 +31,9 @@ dashboardPage(
         tabItems(
             tabItem(
                 tabName = "map",
-                # fluidRow(),
+                fluidRow(
+                    h1("Visualizing Macro Risk Indicators")
+                ),
                 fluidRow( # start fluidRow for imap
                     leafletOutput("imap")
                 ), #end fluidRow for imap
@@ -39,12 +41,12 @@ dashboardPage(
                     column(4, 
                            selectInput(inputId = "select_indicator",
                                        label = h4("Indicator"),
-                                       choices = unique(conflicts_long$indicator),
+                                       choices = ind_vars,
                                        selected = 'food')),
                     column(4,
                            selectInput(inputId = "select_year",
                                        label = h4("Year"),
-                                       choices = unique(conflicts_long$year),
+                                       choices = c(1989, 2014),
                                        selected = '2004')),
                     column(4,
                            selectInput(inputId = "select_hue",
@@ -61,36 +63,45 @@ dashboardPage(
             ), # end tabItem for map
             tabItem(tabName = "chart",
                     fluidRow(
-                        column(3, h3("A closer look:")),
-                        column(3,
+                        column(2, h3("A closer look:")),
+                        column(2,
                                selectInput(inputId = "chart_region", 
                                            label = h4("Region"),
                                            choices = list("Americas", "Africa",
                                                           "Asia", "Europe", "Oceania"),
                                            selected = "Africa")
                                ),
+                        column(2,
+                               selectInput(inputId = "chart_country",
+                                           label = h4("Country"),
+                                           choices = NULL)
+                               ),
+                        column(2,
+                               selectInput(inputId = "chart_indicator",
+                                           label = h4("Indicator"),
+                                           choices = ind_vars,
+                                           selected = 'ineq_swiid')
+                               ),
                         column(3,
                                sliderInput(inputId = "chart_year",
-                                           label = h4("Year"),
+                                           label = h4("Year Range"),
                                            min = 1989,
                                            max = 2014,
                                            value = c(1989, 2014),
-                                           sep = "")),
-                        column(3,
-                               selectInput(inputId = "chart_indicator",
-                                           label = h4("Indicator"),
-                                           choices = unique(factor(conflicts_long$indicator)),
-                                           selected = 'ineq_swiid')
+                                           sep = "")
                                ) # end last column, trends indicator selection
                     ), # end fluidRow 1 of chart
                     fluidRow(
-                        tabBox(title = "Annual Trends",
-                               width = 6,
-                               tabPanel(title = "Annual", plotlyOutput("trends"))),
+                        tabBox(title = "Annual Trends by Country or Region",
+                               width = 12,
+                               tabPanel(title = "Country", plotlyOutput("trend_country")),
+                               tabPanel(title = "Region", plotlyOutput("trends")))
+                    ),
+                    fluidRow(
                         tabBox(title = "Distribution by Region",
-                               width = 6,
+                               width = 12,
                                tabPanel(title = "Region", plotlyOutput("distr")),
-                               tabPanel(title = "Comparison", plotlyOutput("compr")))
+                               tabPanel(title = "Comparison to other regions", plotlyOutput("compr")))
                     ),
                     fluidRow(
                         tabBox(title = "Relationships between Indicators",

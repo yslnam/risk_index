@@ -18,6 +18,38 @@ library(reshape2)
 conflicts_wide <- fread(file = "./data/gcri.csv", drop = 1)
 conflicts_long <- fread(file = "./data/conflicts_by_region.csv", stringsAsFactors = TRUE)
 
+# Indicator labels ##################################
+ind_vars <- c(
+  "Years since highly violent conflict" = "yrs_hvc",
+  "Reccent internal conflict" = "con_int",
+  "Neighboring conflict" = "con_nb",
+  "Regime type" = "reg_u",
+  "Lack of democracy" = "reg_p2",
+  "Government effectiveness" = "gov_eff",
+  "Level of repression" = "repress",
+  "Empowerment rights" = "empower",
+  "National ethnic compilation" = "ethnic_np",
+  "Subnational ethnic compilation" = "ethnic_sn",
+  "Transnational ethnic bonds" = "disper",
+  "Corruption" = "corrupt",
+  "Homicide" = "homic",
+  "Infant mortality" = "mort",
+  "Water stress" = "water",
+  "Oil producer" = "fuel_exp",
+  "Structural constraints" = "struct",
+  "Population size" = "pop",
+  "Youth bulge" = "youthbboth",
+  "GDP per capita" = "gdp_cap",
+  "Openness" = "econ_iso",
+  "Income inequality" = "ineq_swiid",
+  "Food insecurity" = "food",
+  "Unemployment" = "unemp",
+  "National conflict intensity" = "intensity_y_np",
+  "Subnational conflict intensity" = "intensity_y_sn",
+  "National conflict intensity, lagged" = "intensity_y4_np",
+  "Subnational conflict intensity, lagged" = "intensity_y4_sn"
+)
+
 # Custom Function ####################################
 # Adapted from Kyle Walker's WDI_leaflet function
 # Link: https://github.com/walkerke/teaching-with-datavis/blob/master/wdi-leaflet/wdi_leaflet.R
