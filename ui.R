@@ -46,7 +46,7 @@ dashboardPage(
                     column(4,
                            selectInput(inputId = "select_year",
                                        label = h4("Year"),
-                                       choices = c(1989, 2014),
+                                       choices = c(1989:2014),
                                        selected = '2004')),
                     column(4,
                            selectInput(inputId = "select_hue",
