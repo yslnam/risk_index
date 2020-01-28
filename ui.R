@@ -92,16 +92,12 @@ dashboardPage(
                                ) # end last column, trends indicator selection
                     ), # end fluidRow 1 of chart
                     fluidRow(
-                        tabBox(title = "Annual Trends by Country or Region",
+                        tabBox(title = "Trends and Distributions",
                                width = 12,
-                               tabPanel(title = "Country", plotlyOutput("trend_country")),
-                               tabPanel(title = "Region", plotlyOutput("trends")))
-                    ),
-                    fluidRow(
-                        tabBox(title = "Distribution by Region",
-                               width = 12,
-                               tabPanel(title = "Region", plotlyOutput("distr")),
-                               tabPanel(title = "Comparison to other regions", plotlyOutput("compr")))
+                               tabPanel(title = "Annual Trends by Country", plotlyOutput("trend_country")),
+                               tabPanel(title = "Annual Trends by Region", plotlyOutput("trends")),
+                               tabPanel(title = "Distribution by Region", plotlyOutput("distr")),
+                               tabPanel(title = "Distribution by Each Region", plotlyOutput("compr")))
                     ),
                     fluidRow(
                         tabBox(title = "Relationships between Indicators",
