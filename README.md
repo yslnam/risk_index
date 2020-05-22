@@ -5,7 +5,7 @@ Project:
 * Title: Macro Risk Index
 * Purpose: By aggregating and visualizing research-standard datasets on conflict risk indicators, Macro Risk Index allows for efficient exploratory data analysis and reinvestigates econometric approaches to conflict forecasting.
 * Description: Created a "quick and dirty" exploratory data analysis dashboard and an interactive map of risk indicators by country using leaflet. Developed a Shiny app to compile all interactive visualizations.
-* Blog: "[Macro Risk Index: A Tool for Efficient Exploratory Data Analysis of Complex Datasets](https://nycdatascience.com/blog/student-works/macro-risk-index-a-tool-for-efficient-exploratory-data-analysis-of-complex-datasets/)," NYC Data Science Academy
+* Blog: "[Macro Risk Index: A Tool for Efficient Exploratory Data Analysis of Complex Datasets](https://nycdatascience.com/blog/student-works/macro-risk-index-a-tool-for-efficient-exploratory-data-analysis-of-complex-datasets/)," *NYC Data Science Academy*
 
 Technical notes:
 * Languages: R
