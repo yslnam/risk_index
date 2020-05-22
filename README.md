@@ -15,18 +15,13 @@ Technical notes:
 
 ## Directory Structure
 ```
-├── README.md           		<- Top-level README
+├── README.md     <- Top-level README
 │
-├── data                		<- All tasks for unstructured and structured data types
-│   ├── extraction      		<- Unstructured data extraction, e.g. web scraping
-│   ├── cleaning 			<- Raw data cleaning and wrangling
-│   ├── processing    			<- Data preprocessing and processing
-│   ├── analysis_and_visualization    	<- Data analysis and visualization
+├── www           <- Images and media
 │
-├── modeling           			<- Trained and tested machine learning models
+├── global.R      <- Global component of Shiny app
 │
-├── apps      				<- Interactive data visualization
+├── server.R      <- Server component of Shiny app
 │                                           
-├── .gitignore          		<- Avoids uploading data, credentials, outputs,
-│					   system files, etc.
+├── ui.R          <- User interface component of Shiny app
 ```
