@@ -1,5 +1,5 @@
 # Macro Risk Index
-A repository containing project-based GitHub for Macro Risk Index interactive exploratory data analysis tool.
+A repository containing an interactive data visualization project, Macro Risk Index, using conflict risk indicators. Also serves as a efficient EDA tool.
 
 Project:
 * Title: Macro Risk Index
