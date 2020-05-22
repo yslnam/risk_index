@@ -1,5 +1,5 @@
 # Macro Risk Index
-A repository containing an interactive data visualization project, Macro Risk Index, using conflict risk indicators. Also serves as a efficient EDA tool.
+A project-based repository containing Macro Risk, an interactive data visualization and exploratory data analysis tool
 
 Project:
 * Title: Macro Risk Index
